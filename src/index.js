@@ -30,13 +30,9 @@ app.get('/', async (req, res) => {
 });
 
 
-
 //Authentication
 const auth = require('./routes/auth');
 app.use('/auth', auth);
-
-
-
 
 
 
