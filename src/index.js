@@ -9,17 +9,17 @@ const app = express()
 const cors = require('cors')
 app.use(cors())
 
-//BodyParser
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
+//BodyParser OBS: O bodyparser foi descontinuado, a ideia é usar o próprio express, funciona do mesmo jeito e evita uns erros chatos que ficam aparecendo no console.
+//const bodyParser = require('body-parser');
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //MongoDB
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 };
+
 const mongoose = require('mongoose');
 const url = config.mongostring
 mongoose.connect(url, options, () => { console.log('MongoDB Atlas localizado e conectado.') });
@@ -29,12 +29,9 @@ app.get('/', async (req, res) => {
     await res.json({status:'Tramoia Rodando'})
 });
 
-
 //Authentication
 const auth = require('./routes/auth');
 app.use('/auth', auth);
-
-
 
 //Execução
 app.listen(port, ()=> {

@@ -5,26 +5,39 @@ const Users = require('../models/user')
 
 router.post('/', async (req, res) => {
     //Obtêm os dados de login dos headers
-    const {username, password } = req.headers;
+    const { username, password } = req.headers;
     try {
         //Verificando se username(email) e senha foram enviados
         if (!username || !password) return res.send({error:'Dados inválidos'});
         //Obtendo tokens da api do strateegia
         const api_signin_response = await axios.post(`${process.env.APIBASE}/users/v1/auth/signin`,{},{auth:{username:username, password:password}})
-        const {access_token, refresh_token } = api_signin_response.data;
+        const { access_token, refresh_token } = api_signin_response.data;
         //Obtendo dados da api utilizando o token obtido anteriormente
         const user_data = await axios.get(`${process.env.APIBASE}/users/v1/user/me`,{headers:{"Authorization":`Bearer ${access_token}`}});
         const final_data = JSON.parse(JSON.stringify(user_data.data));
-        //Fazendo parsing do tipo de planos e _id e adição do último login para se adequar ao Model
+
+        //Obtendo apartir do token JWT todos projetos que o usuario participa
+        const userProjects = await axios.get(`${process.env.APIBASE}/projects/v1/project`, {headers:{"Authorization":`Bearer ${access_token}`}})
+        const projects = userProjects.data
+
+        //Fazendo parsing do tipo de planos, _id, adição do último login para se adequar ao Model e os projetos do usuario
         final_data['_id'] = final_data['id']
         final_data['plan_type'] = final_data['plan']['type']
         final_data['last_login'] = Date.now()
+        final_data['projects'] = projects
 
         //Ambos os resultados abaixo retornam o mesmo item, apenas diferenciando se o login é o primeiro ou último.
         //Os tokens de acesso e refresh não são armazenados no servidor, são retornados para a aplicação
+
         if (await Users.findOne({_id:final_data['id']})) {
-            //Entrará nesse loop se o usuário já estiver na nossa base de dados, atualizando seu campo de último login
-            const mongo_data = await Users.findOneAndUpdate({_id:final_data['id']},final_data)
+            //Entrará nesse loop se o usuário já estiver na nossa base de dados, atualizando seu campo de último login e também seus projetos, verificando se ele foi adcionado em um novo
+            await Users.findOneAndUpdate({_id:final_data['id']}, {projects: projects}, (err, data) => {
+            if(err){ //Retorna um erro para o dev caso não passe no update
+                    console.log("ERRO", err)    
+                } else {
+                    console.log("DADOS", data)
+                }
+            })
             const toSend = await Users.findOne({_id:final_data['id']})
             toSend['access_token'] = access_token
             toSend['refresh_token'] = refresh_token

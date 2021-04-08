@@ -1,5 +1,5 @@
 # Tramoia API
-Esta API é a base do futuro projeto Tramoia App.
+Esta API é a base do projeto Tramoia App.
 O objetivo dessa API é servir de ponte entre os dados do strateegia.digital e o Tramoia App.
 
 ![logo](logo.png)

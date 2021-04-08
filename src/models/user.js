@@ -11,6 +11,7 @@ const UserSchema = new Schema({
     language: {type: String, required: true},
     first_login: {type: Date, default: null},
     last_login: {type: Date, default: null},
+    projects: {type: Array, default: null},
 })
 
 module.exports = mongoose.model('User', UserSchema, 'users');
