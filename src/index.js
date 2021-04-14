@@ -33,6 +33,10 @@ app.get('/', async (req, res) => {
 const auth = require('./routes/auth');
 app.use('/auth', auth);
 
+//Projects
+const projects = require('./routes/projects');
+app.use('/projects', projects);
+
 //Execução
 app.listen(port, ()=> {
     console.clear();

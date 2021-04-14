@@ -20,6 +20,7 @@ router.post('/', async (req, res) => {
         const userProjects = await axios.get(`${process.env.APIBASE}/projects/v1/project`, {headers:{"Authorization":`Bearer ${access_token}`}})
         const projects = userProjects.data
 
+
         //Fazendo parsing do tipo de planos, _id, adição do último login para se adequar ao Model e os projetos do usuario
         final_data['_id'] = final_data['id']
         final_data['plan_type'] = final_data['plan']['type']
@@ -38,14 +39,16 @@ router.post('/', async (req, res) => {
                     console.log("DADOS", data)
                 }
             })
-            const toSend = await Users.findOne({_id:final_data['id']})
+            const ts = await Users.findOne({_id:final_data['id']})
+            const toSend = ts.toObject()
             toSend['access_token'] = access_token
             toSend['refresh_token'] = refresh_token
             return res.send(toSend)
         } else {
             //Caso o usuário não conste no nosso banco de dados, será adicionado a data de primeiro login e será cadastrado
             final_data['first_login'] = final_data['last_login']
-            const toSend = await Users.create(final_data)
+            const ts = await Users.create(final_data)
+            const toSend = ts.toObject()
             toSend['access_token'] = access_token
             toSend['refresh_token'] = refresh_token
             return res.send(toSend)
