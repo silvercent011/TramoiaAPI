@@ -39,7 +39,7 @@ router.post('/', async (req, res) => {
                     console.log("DADOS", data)
                 }
             })
-            const ts = await Users.findOne({_id:final_data['id']})
+            const ts = await Users.findOne({_id: final_data['id']})
             const toSend = ts.toObject()
             toSend['access_token'] = access_token
             toSend['refresh_token'] = refresh_token
