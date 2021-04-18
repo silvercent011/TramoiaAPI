@@ -12,7 +12,9 @@ O objetivo dessa API é servir de ponte entre os dados do strateegia.digital e o
 * Haziel Farias
 * Sidney Alex
 
-##Ideia proposta: 
+
+
+## Ideia proposta: 
 
 Uma aplicação de monitoramento e observação dos projetos do Strateegia,
 seria um dashboard que iria exibir em gráficos uma série de indicadores 
