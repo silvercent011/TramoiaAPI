@@ -34,7 +34,7 @@ O objetivo dessa API é servir de ponte entre os dados do strateegia.digital e o
 
 ## Justificativa:
 
-Nosso App tem a função de auxiliar os usuários do strateegia.digital na tomada de decisões. No mundo globalizado e tecnológico as empresas estão cada vez mais competitivas. É importante ressaltar o papel dos Fatores Humanos tanto para o funcionamento da empresa em si, como para a relação com stakeholders e os colaboradores. Depreende-se, portanto, a necessidade de ferramentas que auxiliem na gestão de pessoas e tomada de decisão.
+Nosso App tem a função de auxiliar os usuários do strateegia.digital na tomada de decisões. No mundo globalizado e tecnológico as empresas estão cada vez mais competitivas. É importante ressaltar o papel dos fatores Humanos tanto para o funcionamento da empresa em si, como para a relação com stakeholders e os colaboradores. Depreende-se, portanto, a necessidade de ferramentas que auxiliem na gestão de pessoas e tomada de decisão.
 
 
 ## Stack da API
