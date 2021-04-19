@@ -53,9 +53,13 @@ Pretendemos fazer reuniões todas as segundas às 19h e também às quartas às 
 A equipe foi dividida da seguinte forma: 
 
 Arlindo: programador backend.
+
 Bruno: programador backend.
+
 Gustavo: gerente de projeto.
+
 Haziel: programador chefe( frontend e backend ).
+
 Sidney: programador backend e frontend.
  
 Porém, entre as sprints se for percebido a necessidade de realocação de pessoas para a conclusão das tarefas da próxima sprint, a realocação será feita.
