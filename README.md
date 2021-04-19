@@ -13,7 +13,7 @@ O objetivo dessa API é servir de ponte entre os dados do strateegia.digital e o
 ## Time
 * Arlindo Maximiano
 * Bruno Martins
-* Gustavo Nogueira
+* Gustavo Nogueira ( gn2@cin.ufpe.br )
 * Haziel Farias
 * Sidney Alex
 
