@@ -37,6 +37,30 @@ O objetivo dessa API é servir de ponte entre os dados do strateegia.digital e o
 Nosso App tem a função de auxiliar os usuários do strateegia.digital na tomada de decisões. No mundo globalizado e tecnológico as empresas estão cada vez mais competitivas. É importante ressaltar o papel dos fatores Humanos tanto para o funcionamento da empresa em si, como para a relação com stakeholders e os colaboradores. Depreende-se, portanto, a necessidade de ferramentas que auxiliem na gestão de pessoas e tomada de decisão.
 
 
+
+## Plano de Desenvolvimento:
+Para desenvolver todo o sistema por trás dessa plataforma. Nossa equipe irá usar a metodologia ágil SCRUM (Sprints).
+
+
+## Processo de Desenvolvimento
+Reuniões da equipe (Sprint Meeting) ocorrerão nas segundas-feiras, quarta-feiras e sábados Os tópicos das reuniões são:
+Segunda-feira(19:00h a 21:00h): Status Report das tarefas de cada membro da equipe e ajustes para o repórter no strateegia.digital na quarta feira.
+Quarta-feira(20:30h a 22:00h): Retrospectiva da Sprint anterior e definição da tarefas das próxima sprint. 
+Sábado(14:00h a 16:00h): Status Report das tarefas de cada membro da equipe.
+Pretendemos fazer reuniões todas as segundas às 19h e também às quartas às 20:30h, para acompanhamento das atividades. E para suprir supostos atrasos faremos reuniões aos sábados a tarde. Lembrando que não será obrigatório a participação de todos os membros em todas as reuniões, temos que ser compreensíveis que todos estudam, trabalham e tem sua vida pessoal, mas que todos tem que fazer um esforço para contribuir de forma significativa com o projeto.
+ 
+## Divisão do Trabalho
+A equipe foi dividida da seguinte forma: 
+
+Arlindo: programador backend.
+Bruno: programador backend.
+Gustavo: gerente de projeto.
+Haziel: programador chefe( frontend e backend ).
+Sidney: programador backend e frontend.
+ 
+Porém, entre as sprints se for percebido a necessidade de realocação de pessoas para a conclusão das tarefas da próxima sprint, a realocação será feita.
+
+
 ## Stack da API
 * MongoDB
 * Node
