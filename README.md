@@ -11,11 +11,11 @@ O objetivo dessa API é servir de ponte entre os dados do strateegia.digital e o
 
 
 ## Time
-* Arlindo Maximiano
-* Bruno Martins
+* Arlindo Maximiano ( amnn@cin.ufpe.br )
+* Bruno Martins ( bms3@cin.ufpe.br )
 * Gustavo Nogueira ( gn2@cin.ufpe.br )
-* Haziel Farias
-* Sidney Alex
+* Haziel Farias ( hlf@cin.ufpe.br )
+* Sidney Alex ( saaa@cin.ufpe.br )
 
 
 
