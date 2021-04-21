@@ -16,24 +16,11 @@ router.get('/', async (req, res) => {
         const projectEngagement = await axios.get(`${process.env.APIBASE}/projects/v1/project/${id}/content-engagement`, {headers:{"Authorization":`Bearer ${access_token}`}})
 
         const project = userProject.data
-        
-        const finalData = {
-            _id: project.id,
-            statistics: projectStatistics.data, 
-            engagement: projectEngagement.data,
-        }
+        project['statistics'] = projectStatistics.data
+        project['engagement'] = projectEngagement.data
 
-        //Verifica se o projeto existe, se não existir, a gente cria
+        return res.send(project)
         
-        if(await Project.findOne({_id: project.id})){
-            const userProject = await Project.findOne({_id: project.id})
-            return res.send(userProject)
-        } else {
-            const projectCreated = await Project.create(finalData)
-            return res.send(projectCreated)
-        }
-
-        //return res.send(project)
     } catch (error) {
         //Retorna erros se os métodos acima falharem
         return res.send({error:error})
