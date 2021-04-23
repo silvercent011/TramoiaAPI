@@ -19,6 +19,36 @@ router.get('/', async (req, res) => {
         project['statistics'] = projectStatistics.data
         project['engagement'] = projectEngagement.data
 
+        //Fazendo a requisição e obtendo todas as missions do lab
+        const missionsArray = await Promise.all(project['missions'].map(async (mission) => {
+            const labMission = await axios.get(`${process.env.APIBASE}/projects/v1/mission/${mission.id}`, {headers: {"Authorization": `Bearer ${access_token}`}})
+            return labMission.data
+        }))
+        
+        //Obtendo as estatísticas de cada uma das missions
+        const missionsStatistics = await Promise.all(missionsArray.map(async mission => {
+           const missionStatistic = await axios.get(`${process.env.APIBASE}/projects/v1/mission/${mission.id}/statistics`, {headers: {"Authorization": `Bearer ${access_token}`}})
+           return missionStatistic.data
+        }))
+
+        //Mapeia o array de missions, e coloca em cada um dos pontos as suas respectivas estatísticas
+        missionsArray.forEach(mission => {
+            mission.points.forEach(point => {
+                projectEngagement.data.forEach(proj => {
+                    if(proj.id === point.id) {
+                        point['statistic'] = proj
+                    }
+                })
+            })
+        })
+
+        //Mapeamento do array de missions onde é adicionado ao JSON as estatísticas gerais de cada uma das missions
+        missionsArray.map((mission, index) => {
+            mission['statistics'] = missionsStatistics[index]
+        })
+
+        project['missions'] = missionsArray
+
         return res.send(project)
         
     } catch (error) {
