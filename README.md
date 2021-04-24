@@ -68,7 +68,7 @@ Porém, entre as sprints se for percebido a necessidade de realocação de pesso
 
 ## Bibliotecas Utilizadas
 * axios
-* espress
+* express
 * dotenv
 * mongoose
 * body-parser
