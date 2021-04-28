@@ -64,6 +64,16 @@ Porém, entre as sprints se for percebido a necessidade de realocação de pesso
 
 ## Personas
 
+Designers de Estratégia, colaboradores em suas organizações, membros inovadores, ou mentes pensantes com ideias de novas abordagens ou até mesmo criações para transformar uma organização, um negócio, ou um produto.
+
+Gabriel Gomes tem 23 anos, está no 5 período do curso de sistemas de informação. Ele é fã de novas tecnologias, redes sociais e jogos. Ele mora em Paulista e estuda na UFPE no Recife.Ele também trabalha na Microsoft. Designers de Estratégia e inovação. Gabriel perde cerca de 5 horas do seu dia apenas se deslocando de casa, faculdade e trabalho. Como ele perde muito tempo se deslocando sempre tenta resolver  ,sempre que possível, as coisas de forma online.
+
+## Validação
+
+## Prototipagem
+
+## Telas
+
 
 ## Stack da API
 * MongoDB
