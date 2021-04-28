@@ -80,11 +80,6 @@ Foco em 5 perguntas:
 * 3-Bugs presenciados.
 * 4-O que podemos fazer para melhorar a navegação?
 * 5-Falta de alguma função que pudesse ser adicionada?
-
-## Telas
-![logo](tramoia.jpg)
-
-![logo](tramoia2.jpg)
  
  
 ## Stack da API
