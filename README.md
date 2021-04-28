@@ -62,6 +62,9 @@ A equipe foi dividida da seguinte forma:
 Porém, entre as sprints se for percebido a necessidade de realocação de pessoas para a conclusão das tarefas da próxima sprint, a realocação será feita.
 
 
+##Personas
+
+
 ## Stack da API
 * MongoDB
 * Node
