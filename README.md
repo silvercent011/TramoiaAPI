@@ -61,6 +61,9 @@ A equipe foi dividida da seguinte forma:
  
 Porém, entre as sprints se for percebido a necessidade de realocação de pessoas para a conclusão das tarefas da próxima sprint, a realocação será feita.
 
+## Post-mortem do Projeto e relatorios das reuniões:
+
+https://docs.google.com/document/d/1kvtO5D3Dmd2W4xi6OdzVx4sZ5qG7gnOeZK4B5NYPtig/edit?usp=sharing
 
 ## Personas
 
