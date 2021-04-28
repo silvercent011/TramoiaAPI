@@ -36,7 +36,7 @@ router.get('/', async (req, res) => {
             mission.points.forEach(point => {
                 projectEngagement.data.forEach(proj => {
                     if(proj.id === point.id) {
-                        point['statistic'] = proj
+                        point['statistics'] = proj
                     }
                 })
             })
