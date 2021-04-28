@@ -69,12 +69,19 @@ Designers de Estratégia, colaboradores em suas organizações, membros inovador
 Gabriel Gomes tem 23 anos, está no 5 período do curso de sistemas de informação. Ele é fã de novas tecnologias, redes sociais e jogos. Ele mora em Paulista e estuda na UFPE no Recife.Ele também trabalha na Microsoft. Designers de Estratégia e inovação. Gabriel perde cerca de 5 horas do seu dia apenas se deslocando de casa, faculdade e trabalho. Como ele perde muito tempo se deslocando sempre tenta resolver  ,sempre que possível, as coisas de forma online.
 
 ## Validação
+A validação do projeto foi feita por meio de formulários e entrevistas com usuários do Strateegia. O sistema foi disponibilizado para alguns usuários específicos para poderem gerar dados reais para serem analisados. 
+Foco em 5 perguntas:
 
-## Prototipagem
+* 1-Nível de facilidade na navegação.
+* 2-Experiência dos usuários.
+* 3-Bugs presenciados.
+* 4-O que podemos fazer para melhorar a navegação?
+* 5-Falta de alguma função que pudesse ser adicionada?
 
 ## Telas
 
-
+ 
+ 
 ## Stack da API
 * MongoDB
 * Node
